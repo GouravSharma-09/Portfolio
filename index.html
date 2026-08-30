@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,47 +10,125 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="navbar">
         <div class="logo">Gourav<span class="dot">.</span></div>
         <nav class="nav-links">
-            <a href="#">Design</a>
-            <a href="#">Projects</a>
-            <a href="#">About</a>
-            <a href="#" class="lang-switch">EN <span class="underline"></span></a>
+            <a href="#design">Design</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
         </nav>
-        <a href="mailto:contact@gourav.com" class="contact-btn">contact@gourav.com</a>
+        <a href="mailto:gouravsharma.dhn@gmail.com" class="contact-btn">gouravsharma.dhn@gmail.com</a>
     </header>
 
     <main class="hero">
         <div class="hero-intro">
-            👋, my name is Gourav Kumar and I am a B.Tech Student
+            <span id="typewriter-text"></span><span class="cursor">|</span>
         </div>
-        
+
         <div class="hero-title-container">
             <div class="title-line solid-text">Web</div>
             <div class="title-line outline-text">Developer</div>
         </div>
 
-        <div class="hero-bottom-info">
-            <div class="location">based in India.</div>
-            <div class="partners">
-                <span class="partner">React</span>
-                <span class="partner">NodeJS</span>
-                <span class="partner">MongoDB</span>
-                <span class="partner">Figma</span>
-            </div>
-        </div>
 
         <div class="hero-image-container">
-            <img src="portrait.jpg" alt="Gourav Kumar" class="hero-image">
+            <img src="portrait.png?v=2" alt="Gourav Kumar" class="hero-image">
         </div>
 
         <div class="action-buttons">
-            <button class="btn btn-dark">You need a developer</button>
-            <button class="btn btn-light">View my work</button>
+            <button class="btn btn-dark" onclick="window.location.href='mailto:gouravsharma.dhn@gmail.com'">You need a
+                developer</button>
+            <button class="btn btn-light" onclick="window.location.href='#design'">View my work</button>
         </div>
     </main>
+
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Hi! I'm Gourav Kumar, a B.Tech student with a passion for web development and design. I love
+                        building clean, modern, and user-friendly digital experiences.</p>
+                    <p>When I'm not coding, I'm exploring new design trends, learning new technologies, or working on
+                        personal projects to improve my skills.</p>
+                    <a href="mailto:gouravsharma.dhn@gmail.com" class="contact-btn about-btn">Let's talk</a>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-box">
+                        <h3>1</h3>
+                        <p>Year experience</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>5+</h3>
+                        <p>Projects built</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>100%</h3>
+                        <p>Dedication</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="design" class="design-section">
+        <h2 class="section-title">Design Work</h2>
+        <div class="design-grid">
+            <div class="design-card">
+                <div class="design-img" style="background-image: url('brand_identity.jpg');"></div>
+                <h3>Brand Identity</h3>
+            </div>
+            <div class="design-card">
+                <div class="design-img" style="background-image: url('ui-ux-design.png');"></div>
+                <h3>UI/UX Concepts</h3>
+            </div>
+            <div class="design-card">
+                <div class="design-img" style="background-image: url('web_design.jpg');"></div>
+                <h3>Web Design</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('project_portfolio.jpg');"></div>
+                <div class="project-info">
+                    <h3>Personal Portfolio</h3>
+                    <p>A responsive portfolio website built from scratch to showcase my skills and journey.</p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>Git</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('project_todo.jpg');"></div>
+                <div class="project-info">
+                    <h3>Interactive To-Do List</h3>
+                    <p>A dynamic task manager built with vanilla JavaScript. Hosted and version-controlled via GitHub.
+                    </p>
+                    <div class="project-tags">
+                        <span>JavaScript</span><span>HTML</span><span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img" style="background-image: url('project_terminal.jpg');"></div>
+                <div class="project-info">
+                    <h3>Terminal & Git Basics</h3>
+                    <p>Mastering version control workflows and command line operations for efficient development.</p>
+                    <div class="project-tags">
+                        <span>Terminal</span><span>Git</span><span>GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="index.js"></script>
 </body>
+
 </html>
