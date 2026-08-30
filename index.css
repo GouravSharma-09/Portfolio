@@ -1,0 +1,271 @@
+:root {
+    --bg-color: #ffffff;
+    --text-primary: #181818;
+    --text-secondary: #666666;
+    --accent-color: #ff3366;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: -1.5px;
+}
+
+.logo .dot {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 400;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.6;
+}
+
+.lang-switch {
+    position: relative;
+    font-weight: 500 !important;
+}
+
+.lang-switch .underline {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+}
+
+.contact-btn {
+    text-decoration: none;
+    background-color: var(--text-primary);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #333;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+}
+
+.hero-intro {
+    font-size: 1.4rem;
+    color: var(--text-secondary);
+    font-weight: 400;
+    z-index: 5;
+    position: absolute;
+    top: 15%;
+}
+
+.hero-title-container {
+    text-align: center;
+    line-height: 0.85;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title-line {
+    font-size: clamp(6rem, 16vw, 16rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+.solid-text {
+    color: var(--text-primary);
+}
+
+.outline-text {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text-primary);
+}
+
+.hero-image-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    pointer-events: none; /* Let clicks pass through the transparent parts */
+    mix-blend-mode: darken;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.hero-bottom-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 4rem;
+    position: absolute;
+    bottom: 20%;
+    z-index: 0;
+}
+
+.location {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.partners {
+    display: flex;
+    gap: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+.action-buttons {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.btn {
+    padding: 1.2rem 2rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--text-primary);
+}
+
+.btn-dark {
+    background-color: var(--text-primary);
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
+
+.btn-light {
+    background-color: transparent;
+    color: var(--text-primary);
+    backdrop-filter: blur(5px);
+}
+
+.btn-light:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1.5rem 2rem;
+    }
+    
+    .hero-bottom-info {
+        padding: 0 2rem;
+        bottom: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-bottom-info {
+        flex-direction: column;
+        align-items: center;
+        bottom: 20%;
+        gap: 1rem;
+        display: none;
+    }
+    
+    .hero-intro {
+        text-align: center;
+        padding: 0 1rem;
+        font-size: 1.1rem;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        width: 90%;
+        bottom: 5%;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-image-container {
+        max-width: 100%;
+        bottom: 10%;
+    }
+}
